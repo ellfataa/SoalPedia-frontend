@@ -1,10 +1,10 @@
-# 📚 SoalPedia - Kumpulan Materi dan Soal Digital Interaktif
+# 📚 SoalPedia - Kumpulan Soal Digital Interaktif
 
 
 ![logo2](https://github.com/user-attachments/assets/1feefd16-cf89-4db7-8e6e-c4d54c637d97)
 
 
-[Link Front End SoalPedia] (https://soal-pedia.vercel.app/)
+[Link Front End SoalPedia] (https://soal-pedia-frontend.vercel.app/)
 
 ## 🌟 Tentang SoalPedia  
 
