@@ -1,0 +1,372 @@
+:root {
+  --primary-purple: #7b4397;
+  --soft-gray: #6c757d;
+  --light-bg: #f8f9fa;
+  --light-border: #e9ecef;
+  --dark-text: #343a40;
+}
+
+* {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--light-bg);
+  color: var(--soft-gray);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.logo1 {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.logoAwal {
+  width: 80px;
+  height: 80px;
+  transition: transform 0.3s ease;
+}
+
+.logoAwal:hover {
+  transform: scale(1.05);
+}
+
+.btnAwal {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.user {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--soft-gray);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.user:hover {
+  color: var(--primary-purple);
+  transform: translateY(-2px);
+}
+
+.heading-section {
+  padding: 20px 50px;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInMoveUp 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.back-link {
+  display: flex;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--soft-gray);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.back-link:hover {
+  color: var(--primary-purple);
+  transform: translateX(-5px);
+}
+
+.back-link img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  filter: invert(40%) sepia(0%) saturate(1%) hue-rotate(186deg) brightness(98%) contrast(85%);
+  transition: filter 0.3s ease;
+}
+
+.back-link:hover img {
+  filter: invert(30%) sepia(90%) saturate(1400%) hue-rotate(250deg) brightness(80%);
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 10px 50px 50px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInMoveUp 0.8s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+.main-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--dark-text);
+  margin-bottom: 10px;
+  display: block;
+}
+
+.form-container-wrapper {
+  background-color: #ffffff; /* Background putih untuk form */
+  padding: 30px; /* Padding di sekitar tabel form */
+  border-radius: 15px; /* Sudut membulat */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); /* Bayangan lembut */
+  max-width: 650px; /* Batasi lebar container form */
+  margin: 0; /* Tengah secara horizontal */
+}
+
+.profile-form table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px; /* Diubah: Jarak antar baris dikurangi menjadi 10px */
+}
+
+.profile-form table tr td {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--dark-text);
+  padding: 5px 0;
+  vertical-align: middle;
+}
+
+.profile-form table tr td:first-child {
+  width: 120px;
+  white-space: nowrap;
+}
+
+.profile-form table tr td:nth-child(2) {
+  width: 20px;
+  text-align: center;
+}
+
+.profile-form input[type="text"],
+.profile-form input[type="password"],
+.profile-form .role-select {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--dark-text);
+  border: 1px solid var(--light-border);
+  border-radius: 8px;
+  padding: 10px 15px;
+  width: 100%;
+  max-width: 300px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-form input[type="text"]:focus,
+.profile-form input[type="password"]:focus,
+.profile-form .role-select:focus {
+  border-color: var(--primary-purple);
+  box-shadow: 0 0 0 0.2rem rgba(123, 67, 151, 0.25);
+}
+
+.profile-form input::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #adb5bd;
+}
+
+.role-select {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%236c757d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+}
+
+.form-actions {
+  padding-top: 20px !important; /* Jarak atas untuk tombol dikurangi */
+  text-align: left;
+}
+
+.cancel-button,
+.submit-button {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 10px 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.cancel-button {
+  color: var(--primary-purple);
+  border: 1px solid var(--primary-purple);
+  background-color: white;
+  margin-right: 15px;
+}
+
+.cancel-button:hover {
+  background-color: var(--primary-purple);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.submit-button {
+  color: white;
+  border: 1px solid var(--primary-purple);
+  background-color: var(--primary-purple);
+}
+
+.submit-button:hover {
+  background-color: white;
+  color: var(--primary-purple);
+  transform: translateY(-2px);
+}
+
+footer {
+  width: 100%;
+  padding: 20px 30px;
+  margin-top: auto;
+  background-color: var(--primary-purple);
+  text-align: left;
+}
+
+.copyRight {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  margin: 0;
+}
+
+@keyframes fadeInMoveUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 992px) {
+  .header {
+    padding: 8px 20px;
+  }
+  .logoAwal {
+    width: 70px;
+    height: 70px;
+  }
+  .user {
+    font-size: 16px;
+  }
+  .main-title {
+    font-size: 32px;
+  }
+  .form-container-wrapper {
+    padding: 25px;
+    max-width: 600px;
+  }
+  .profile-form table tr td {
+    font-size: 15px;
+  }
+  .profile-form input[type="text"],
+  .profile-form input[type="password"],
+  .profile-form .role-select {
+    font-size: 14px;
+    padding: 8px 12px;
+    max-width: 250px;
+  }
+  .cancel-button, .submit-button {
+    font-size: 15px;
+    padding: 8px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 15px;
+  }
+  .btnAwal {
+    margin-top: 15px;
+    justify-content: center;
+    width: 100%;
+  }
+  .user {
+    margin: 0 auto;
+  }
+  .heading-section {
+    padding: 15px;
+    justify-content: center;
+  }
+  .main-content {
+    padding: 15px;
+  }
+  .main-title {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .form-container-wrapper {
+    padding: 20px;
+    max-width: 90%; /* Lebih responsif */
+  }
+  .profile-form table {
+    border-spacing: 0 8px; /* Jarak antar baris dikurangi lagi */
+  }
+  .profile-form table tr td {
+    font-size: 14px;
+  }
+  .profile-form table tr td:first-child {
+    width: 100px; /* Sesuaikan lebar label */
+  }
+  .profile-form input[type="text"],
+  .profile-form input[type="password"],
+  .profile-form .role-select {
+    max-width: 100%;
+  }
+  .form-actions {
+    text-align: center;
+    padding-top: 15px !important; /* Jarak atas tombol dikurangi */
+  }
+  .cancel-button, .submit-button {
+    margin: 5px;
+    width: 120px;
+  }
+}
+
+@media (max-width: 576px) {
+  .user {
+    font-size: 15px;
+  }
+  .main-title {
+    font-size: 24px;
+  }
+  .profile-form table {
+    width: 100%;
+  }
+  .profile-form table tr td:first-child {
+    width: 80px;
+  }
+}

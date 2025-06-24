@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download Materi</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    
+    <link rel="stylesheet" href="downloadMateri.css">
+  </head>
+  
+  <body>
+    <!-- NAVBAR -->
+    <nav class="header">
+      <div class="logo1">
+        <img class="logoAwal" src="../gambar/logo2.svg" alt="SoalPedia" />
+      </div>
+
+      <div class="menuAwal">
+        <a class="menuKumpulan" href="../kumpulan_soal/draft_materi.html">Kumpulan Soal</a>
+      </div>
+
+      <div class="btnAwal">
+        <a class="btnMasuk" href="">Hallo, Luthfi</a>
+      </div>
+    </nav>
+    <!-- AKHIR NAVBAR -->
+
+    <div class="heading-section">
+      <div class="back">
+        <a href="draft_materi.html">
+          <img src="../icon/back.svg" alt="Back">
+          Back
+        </a>
+      </div>
+    </div>
+
+    <div class="main-content-wrapper">
+      <div class="main-controls-download">
+        <div class="namaMapel">
+          <p>Sila Pancasila</p>
+        </div>
+        <div class="search-bar-download">
+          <input type="text" name="search" placeholder="Cari...">
+        </div>
+      </div>
+
+      <div class="download-table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Judul Materi</th>
+                    <th>Pemilik</th>
+                    <th>Tipe File</th>
+                    <th>Terakhir Diubah</th>
+                    <th>Ukuran File</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="judul-materi-cell">
+                      Soal Indonesia Maritim
+                      <span class="report-trigger" data-modal-target="#reportModal1">
+                        <img src="../icon/info2.svg" alt="Pelaporan" style="width: 20px; height: 20px; vertical-align: middle;">
+                      </span>
+                    </td>
+                    <td>Guru</td>
+                    <td>PDF</td>
+                    <td>10 November 2023</td>
+                    <td>1,8 MB</td>
+                    <td>
+                      <a class="download-button" href="">
+                        <img src="../icon/unduh.svg" alt="Download">
+                      </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="judul-materi-cell">
+                      Soal Kedaulatan Rakyat
+                      <span class="report-trigger" data-modal-target="#reportModal2">
+                        <img src="../icon/info2.svg" alt="Pelaporan" style="width: 20px; height: 20px; vertical-align: middle;">
+                      </span>
+                    </td>
+                    <td>Admin</td>
+                    <td>DOCX</td>
+                    <td>5 April 2024</td>
+                    <td>2,1 MB</td>
+                    <td>
+                      <a class="download-button" href="">
+                        <img src="../icon/unduh.svg" alt="Download">
+                      </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+    </div>
+
+    <footer>
+      <p class="copyRight">&copy; 2023, SoalPedia</p>
+    </footer>
+
+    <!-- Modal 1 -->
+    <div id="reportModal1" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <p class="modal-title">Laporkan Soal</p>
+            <form onsubmit="handleReportSubmission(event, this)">
+                <div class="radio-option">
+                    <input type="radio" name="laporan" id="menyimpang-modal1" value="Soal Menyimpang" required>
+                    <label for="menyimpang-modal1">Soal Menyimpang</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="laporan" id="teknis-modal1" value="Kesalahan Teknis">
+                    <label for="teknis-modal1">Kesalahan Teknis</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="laporan" id="instruksi-modal1" value="Ketidakjelasan Instruksi">
+                    <label for="instruksi-modal1">Ketidakjelasan Instruksi</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="laporan" id="konten-modal1" value="Konten Tidak Pantas">
+                    <label for="konten-modal1">Konten Tidak Pantas</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="laporan" id="perbaikan-modal1" value="Usulan Perbaikan">
+                    <label for="perbaikan-modal1">Usulan Perbaikan</label>
+                </div>
+                <div class="report-buttons">
+                    <button type="submit" class="kirim-button">Kirim</button>
+                    <button type="button" class="batal-button">Batal</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div id="reportModal2" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <p class="modal-title">Laporkan Soal</p>
+            <form onsubmit="handleReportSubmission(event, this)">
+                <div class="radio-option">
+                    <input type="radio" name="laporan" id="menyimpang-modal2" value="Soal Menyimpang" required>
+                    <label for="menyimpang-modal2">Soal Menyimpang</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="laporan" id="teknis-modal2" value="Kesalahan Teknis">
+                    <label for="teknis-modal2">Kesalahan Teknis</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="laporan" id="instruksi-modal2" value="Ketidakjelasan Instruksi">
+                    <label for="instruksi-modal2">Ketidakjelasan Instruksi</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="laporan" id="konten-modal2" value="Konten Tidak Pantas">
+                    <label for="konten-modal2">Konten Tidak Pantas</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="laporan" id="perbaikan-modal2" value="Usulan Perbaikan">
+                    <label for="perbaikan-modal2">Usulan Perbaikan</label>
+                </div>
+                <div class="report-buttons">
+                    <button type="submit" class="kirim-button">Kirim</button>
+                    <button type="button" class="batal-button">Batal</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+      function handleReportSubmission(event, formElement) {
+          event.preventDefault();
+          
+          const selectedReport = formElement.querySelector('input[name="laporan"]:checked');
+          
+          if (selectedReport) {
+              alert(`Laporan Anda (${selectedReport.value}) telah berhasil dikirim. Terima kasih atas kontribusinya!`);
+              // Tutup modal setelah pengiriman
+              const modal = formElement.closest('.modal');
+              modal.classList.remove('show');
+              setTimeout(() => {
+                modal.style.display = 'none';
+              }, 300);
+              // Reset form radio buttons
+              selectedReport.checked = false;
+          } else {
+              alert("Silakan pilih jenis laporan terlebih dahulu!");
+          }
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        const reportTriggers = document.querySelectorAll('.report-trigger');
+        const closeButtons = document.querySelectorAll('.close-button');
+        const batalButtons = document.querySelectorAll('.batal-button');
+
+        // Open modal
+        reportTriggers.forEach(trigger => {
+          trigger.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const modalId = this.dataset.modalTarget;
+            const modal = document.querySelector(modalId);
+            if (modal) {
+              modal.style.display = 'flex';
+              setTimeout(() => {
+                modal.classList.add('show');
+              }, 10);
+            }
+          });
+        });
+
+        // Close modal via close button
+        closeButtons.forEach(button => {
+          button.addEventListener('click', function() {
+            const modal = this.closest('.modal');
+            modal.classList.remove('show');
+            setTimeout(() => {
+              modal.style.display = 'none';
+            }, 300);
+            resetForm(modal);
+          });
+        });
+
+        // Close modal via cancel button
+        batalButtons.forEach(button => {
+          button.addEventListener('click', function() {
+            const modal = this.closest('.modal');
+            modal.classList.remove('show');
+            setTimeout(() => {
+              modal.style.display = 'none';
+            }, 300);
+            resetForm(modal);
+          });
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', function(event) {
+          document.querySelectorAll('.modal').forEach(modal => {
+            if (event.target === modal) {
+              modal.classList.remove('show');
+              setTimeout(() => {
+                modal.style.display = 'none';
+              }, 300);
+              resetForm(modal);
+            }
+          });
+        });
+
+        // Helper function to reset form
+        function resetForm(modal) {
+          const form = modal.querySelector('form');
+          if (form) {
+            const selectedRadio = form.querySelector('input[name="laporan"]:checked');
+            if (selectedRadio) {
+              selectedRadio.checked = false;
+            }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

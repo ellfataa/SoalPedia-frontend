@@ -1,0 +1,316 @@
+:root {
+  --primary-purple: #7b4397;
+  --soft-gray: #6c757d;
+  --light-bg: #f8f9fa;
+  --light-border: #e9ecef;
+}
+
+* {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--light-bg);
+  color: var(--soft-gray);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px; /* Padding header disesuaikan */
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.logo1 {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.logoAwal {
+  width: 80px;
+  height: 80px;
+  margin-left: 0; /* Sesuaikan margin-left */
+  transition: transform 0.3s ease;
+}
+
+.logoAwal:hover {
+  transform: scale(1.05);
+}
+
+.user-list { /* Dihapus karena tidak ada di HTML yang baru */
+  display: none; 
+}
+
+.btnAwal {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 0; /* Sesuaikan margin-right */
+}
+
+.btnMasuk {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--soft-gray);
+  margin-right: 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.btnMasuk:hover {
+  color: var(--primary-purple);
+  transform: translateY(-2px);
+}
+
+.edit-profil {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  background-color: var(--primary-purple);
+  padding: 8px 25px;
+  border-radius: 25px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.edit-profil:hover {
+  background-color: transparent;
+  color: var(--primary-purple);
+  border: 2px solid var(--primary-purple);
+  transform: translateY(-2px);
+}
+
+.btnDaftar {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-purple);
+  border: 2px solid var(--primary-purple);
+  border-radius: 25px;
+  padding: 8px 25px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.btnDaftar:hover {
+  background-color: var(--primary-purple);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.heading {
+  width: 100%;
+  padding: 40px 20px 20px; /* Padding atas dan bawah untuk judul */
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInMoveUp 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.paragraf1 {
+  font-size: 38px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #343a40;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.2;
+}
+
+.main {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Pusat kartu materi */
+  gap: 30px; /* Jarak antar kartu */
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInMoveUp 0.8s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+.materi {
+  width: 280px; /* Lebar kartu sedikit lebih kecil */
+  min-height: 250px; /* Min-height untuk konsistensi */
+  background-color: #ffffff;
+  border: 1px solid var(--light-border);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Bayangan lembut */
+  overflow: hidden; /* Pastikan gambar tidak keluar dari radius */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animasi hover */
+}
+
+.materi:hover {
+  transform: translateY(-8px); /* Sedikit naik saat hover */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Bayangan lebih jelas saat hover */
+}
+
+.gambar-wrapper {
+  width: 100%;
+  height: 150px; /* Tinggi tetap untuk gambar */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0; /* Warna latar belakang jika gambar tidak proporsional */
+}
+
+.gambarMateri {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Pastikan gambar mengisi area tanpa distorsi */
+  border-radius: 15px 15px 0 0;
+}
+
+.mapel {
+  padding: 15px; /* Padding di dalam kotak teks materi */
+  flex-grow: 1; /* Biarkan mengisi sisa ruang */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.namaMateri {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #343a40; /* Warna teks yang lebih gelap */
+  text-align: center;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.namaMateri:hover {
+  color: var(--primary-purple);
+}
+
+footer {
+  width: 100%;
+  padding: 20px 30px;
+  margin-top: auto;
+  background-color: var(--primary-purple);
+  text-align: left; /* Teks footer rata kiri */
+}
+
+.copyRight {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  margin: 0;
+}
+
+@keyframes fadeInMoveUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 992px) {
+  .header {
+    padding: 8px 20px;
+  }
+  .logoAwal {
+    width: 70px;
+    height: 70px;
+  }
+  .btnMasuk, .edit-profil, .btnDaftar {
+    font-size: 16px;
+    padding: 6px 20px;
+  }
+  .paragraf1 {
+    font-size: 32px;
+  }
+  .materi {
+    width: 250px;
+    min-height: 220px;
+  }
+  .gambar-wrapper {
+    height: 120px;
+  }
+  .namaMateri {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 15px;
+  }
+  .btnAwal {
+    margin-top: 15px;
+    justify-content: center;
+    flex-wrap: wrap; /* Izinkan tombol wrap */
+  }
+  .logoAwal {
+    margin-left: 0;
+  }
+  .btnMasuk, .edit-profil, .btnDaftar {
+    margin: 5px; /* Spasi antar tombol pada mobile */
+  }
+  .paragraf1 {
+    font-size: 28px;
+    padding: 0 15px;
+  }
+  .main {
+    padding: 15px;
+    gap: 20px;
+  }
+  .materi {
+    width: 280px; /* Kembali ke lebar ini agar tidak terlalu kecil */
+    min-height: 250px;
+  }
+  .gambar-wrapper {
+    height: 150px;
+  }
+  .namaMateri {
+    font-size: 16px;
+  }
+  footer {
+    padding: 15px;
+  }
+  .copyRight {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .paragraf1 {
+    font-size: 24px;
+  }
+  .materi {
+    width: 90%; /* Ambil hampir seluruh lebar di layar sangat kecil */
+    margin: 10px auto; /* Pusatkan kartu */
+  }
+  .gambar-wrapper {
+    height: 180px; /* Biarkan gambar sedikit lebih besar */
+  }
+}

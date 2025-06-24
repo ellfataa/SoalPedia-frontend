@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profil</title>
+
+    <link rel="stylesheet" href="edit-profil.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <nav class="header">
+        <div class="logo1">
+          <img class="logoAwal" src="../gambar/logo2.svg" alt="SoalPedia" />
+        </div>
+        <div class="btnAwal">
+            <a class="user" href="">Hallo, Luthfi</a>
+        </div>
+    </nav>
+  
+    <div class="heading-section">
+        <a href="mapel.html" class="back-link">
+            <img src="../icon/back.svg" alt="Back icon">
+            Back
+        </a>
+    </div>
+
+    <div class="main-content">
+        <span class="main-title">Edit Profil</span>
+        <div class="form-container-wrapper"> <form action="" method="post" class="profile-form">
+                <table>
+                    <tr>
+                        <td>Nama</td>
+                        <td>:</td>
+                        <td>
+                            <input type="text" name="nama" placeholder="Masukkan nama...">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Username</td>
+                        <td>:</td>
+                        <td>
+                            <input type="text" name="username" placeholder="Masukkan username...">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>:</td>
+                        <td>
+                            <input type="text" name="email" placeholder="Masukkan email...">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td>:</td>
+                        <td>
+                            <input type="password" name="password" placeholder="Masukkan password...">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Role</td>
+                        <td>:</td>
+                        <td>
+                            <select class="role-select" name="role" id="role">
+                                <option value="admin">Admin</option>
+                                <option value="guru">Guru</option>
+                                <option value="siswa">Siswa</option>
+                                <option value="editor">Editor</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td class="form-actions">
+                            <button type="button" class="cancel-button">Cancel</button>
+                            <button type="submit" class="submit-button">Submit</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p class="copyRight">&copy; 2023, SoalPedia</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cancelButton = document.querySelector('.cancel-button');
+            const submitButton = document.querySelector('.submit-button');
+
+            if (cancelButton) {
+                cancelButton.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    window.location.href = 'mapel.html';
+                });
+            }
+            
+            if (submitButton) {
+                submitButton.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    // Di sini Anda bisa menambahkan logika untuk menyimpan perubahan profil
+                    alert('Profil berhasil diperbarui!');
+                    window.location.href = 'mapel.html';
+                });
+            }
+        });
+    </script>
+</body>
+</html>

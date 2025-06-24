@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kumpulan Soal</title>
+
+    <link rel="stylesheet" href="mapel.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="header">
+      <div class="logo1">
+        <img class="logoAwal" src="../gambar/logo2.svg" alt="SoalPedia" />
+        </div>
+      <div class="btnAwal">
+        <a class="btnMasuk" href="">Hallo, Luthfi</a>
+        <a class="edit-profil" href="edit-profil.html">Lihat Profil</a>
+        <a id="tombolKeluar" class="btnDaftar" href="../logres.html">Keluar</a>
+      </div>
+    </nav>
+
+    <div class="heading">
+      <p class="paragraf1">Materi Pelajaran</p>
+    </div>
+
+    <div class="main">
+      <div class="materi">
+        <div class="gambar-wrapper">
+          <img class="gambarMateri" src="../gambar/pai.svg" alt="Pendidikan Agama Islam" />
+        </div>
+        <div class="mapel">
+          <a class="namaMateri" href="../kumpulan_soal/draft_materi.html">Pendidikan Agama Islam</a>
+        </div>
+      </div>
+
+      <div class="materi">
+        <div class="gambar-wrapper">
+          <img class="gambarMateri" src="../gambar/pancasila.svg" alt="Pendidikan Pancasila" />
+        </div>
+        <div class="mapel">
+          <a class="namaMateri" href="../kumpulan_soal/draft_materi.html">Pendidikan Pancasila</a>
+        </div>
+      </div>
+
+      <div class="materi">
+        <div class="gambar-wrapper">
+          <img class="gambarMateri" src="../gambar/bindo.svg" alt="Bahasa Indonesia" />
+        </div>
+        <div class="mapel">
+          <a class="namaMateri" href="../kumpulan_soal/draft_materi.html">Bahasa Indonesia</a>
+        </div>
+      </div>
+
+      <div class="materi">
+        <div class="gambar-wrapper">
+          <img class="gambarMateri" src="../gambar/matematika.svg" alt="Matematika" />
+        </div>
+        <div class="mapel">
+          <a class="namaMateri" href="../kumpulan_soal/draft_materi.html">Matematika</a>
+        </div>
+      </div>
+
+      <div class="materi">
+        <div class="gambar-wrapper">
+          <img class="gambarMateri" src="../gambar/olahraga.svg" alt="PJOK" />
+        </div>
+        <div class="mapel">
+          <a class="namaMateri" href="../kumpulan_soal/draft_materi.html">PJOK</a>
+        </div>
+      </div>
+
+      <div class="materi">
+        <div class="gambar-wrapper">
+          <img class="gambarMateri" src="../gambar/senbud.svg" alt="Seni dan Budaya" />
+        </div>
+        <div class="mapel">
+          <a class="namaMateri" href="../kumpulan_soal/draft_materi.html">Seni dan Budaya</a>
+        </div>
+      </div>
+
+      <div class="materi">
+        <div class="gambar-wrapper">
+          <img class="gambarMateri" src="../gambar/geografi.svg" alt="Geografi" />
+        </div>
+        <div class="mapel">
+          <a class="namaMateri" href="../kumpulan_soal/draft_materi.html">Geografi</a>
+        </div>
+      </div>
+
+      <div class="materi">
+        <div class="gambar-wrapper">
+          <img class="gambarMateri" src="../gambar/mipa.svg" alt="Fisika" />
+        </div>
+        <div class="mapel">
+          <a class="namaMateri" href="../kumpulan_soal/draft_materi.html">Fisika</a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p class="copyRight">&copy; 2023, SoalPedia</p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const tombolKeluar = document.getElementById("tombolKeluar");
+
+        if (tombolKeluar) {
+          tombolKeluar.addEventListener("click", function (event) {
+            event.preventDefault(); 
+            
+            localStorage.removeItem("userData");
+            localStorage.removeItem("currentUser"); 
+
+            alert("Logout berhasil!");
+
+            window.location.href = "../logres.html";
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

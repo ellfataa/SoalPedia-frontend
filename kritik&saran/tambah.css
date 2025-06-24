@@ -1,0 +1,436 @@
+* {
+  text-decoration: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif, "Gill Sans";
+  background-color: #f8f8f8;
+  line-height: 1.6;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 30px;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-shrink: 0;
+}
+
+.logo-area {
+  flex-shrink: 0;
+  padding-right: 20px;
+}
+
+.logoAwal {
+  width: 80px;
+  height: 80px;
+}
+
+.menuAwal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.menuKumpulan {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+  text-align: center;
+  border-bottom: 2px solid #e78fb3;
+  padding-bottom: 2px;
+  transition: color 0.3s ease;
+}
+
+.menuKumpulan:hover {
+  color: #e78fb3;
+}
+
+.btnAwal {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.btnMasuk {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  padding: 8px 15px;
+  transition: color 0.3s ease;
+}
+
+.btnMasuk:hover {
+  color: #9656a1;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 20px 30px 20px 30px;
+  background-color: #f8f8f8;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.back a {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.back a:hover {
+  color: #9656a1;
+}
+
+.back img {
+  width: 20px;
+  height: 20px;
+}
+
+.main-content-wrapper {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-top: 30px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.main h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.main form table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.main form table tr td {
+  padding: 10px 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  vertical-align: top;
+}
+
+.main form table tr td:first-child {
+  width: 150px;
+  padding-right: 20px;
+}
+
+.kritik,
+.saran {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 80px; /* Minimum height for textareas */
+}
+
+.kritik::placeholder,
+.saran::placeholder {
+  color: #aaa;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+  gap: 10px;
+  padding-top: 20px;
+}
+
+.cancel,
+.submit {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 7px;
+  padding: 10px 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.cancel {
+  color: #9656a1;
+  border: 1px solid #9656a1;
+  background-color: white;
+}
+.cancel:hover {
+  background-color: #9656a1;
+  color: white;
+}
+
+.submit {
+  color: white;
+  border: 1px solid #9656a1;
+  background-color: #9656a1;
+}
+.submit:hover {
+  background-color: white;
+  color: #9656a1;
+}
+
+footer {
+  width: 100%;
+  padding: 15px 30px;
+  background-color: #9656a1;
+  text-align: left;
+  flex-shrink: 0;
+  margin-top: auto;
+}
+
+.copyRight {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .header {
+    padding: 5px 20px;
+  }
+  .logoAwal {
+    width: 70px;
+    height: 70px;
+  }
+  .menuAwal {
+    gap: 15px;
+  }
+  .menuKumpulan {
+    font-size: 16px;
+  }
+  .btnMasuk {
+    font-size: 15px;
+  }
+
+  .heading {
+    padding: 15px 20px;
+    gap: 15px;
+  }
+  .back a {
+    font-size: 15px;
+  }
+  .back img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .main-content-wrapper {
+    padding: 0 20px;
+  }
+  .main {
+    margin-top: 20px;
+    padding: 20px;
+  }
+  .main h2 {
+    font-size: 24px;
+  }
+  .main form table tr td {
+    font-size: 15px;
+  }
+  .kritik,
+  .saran {
+    font-size: 14px;
+    padding: 8px;
+  }
+  .cancel,
+  .submit {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+
+  footer {
+    padding: 15px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    gap: 15px;
+  }
+  .logo-area {
+    margin-bottom: 0;
+  }
+  .logoAwal {
+    width: 60px;
+    height: 60px;
+  }
+  .menuAwal {
+    flex-grow: 0;
+    width: 100%;
+    text-align: center;
+    order: 2;
+  }
+  .btnAwal {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-left: 0;
+    order: 1;
+  }
+  .btnMasuk {
+    width: 100%;
+    text-align: center;
+    padding: 10px 15px;
+  }
+
+  .heading {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .main-content-wrapper {
+    padding: 0 15px;
+  }
+  .main {
+    margin-top: 15px;
+    padding: 15px;
+  }
+  .main h2 {
+    font-size: 20px;
+  }
+  .main form table tr td {
+    font-size: 14px;
+  }
+  .kritik,
+  .saran {
+    font-size: 13px;
+    padding: 7px;
+  }
+  .cancel,
+  .submit {
+    font-size: 13px;
+    padding: 7px 15px;
+  }
+
+  footer {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    padding: 10px;
+  }
+  .logoAwal {
+    width: 50px;
+    height: 50px;
+  }
+  .menuKumpulan {
+    font-size: 14px;
+  }
+  .btnMasuk {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  .heading {
+    padding: 10px;
+    gap: 8px;
+  }
+  .back a {
+    font-size: 13px;
+  }
+  .back img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .main {
+    padding: 10px;
+  }
+  .main h2 {
+    font-size: 18px;
+  }
+  .main form table tr td {
+    font-size: 13px;
+    display: block; /* Stack table cells on small screens */
+    width: 100%;
+  }
+  .main form table tr td:first-child {
+    width: 100%;
+    padding-right: 0;
+    padding-bottom: 5px;
+  }
+  .kritik,
+  .saran {
+    font-size: 12px;
+    padding: 6px;
+  }
+  .form-buttons {
+    justify-content: center; /* Center buttons on small screens */
+  }
+  .cancel,
+  .submit {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  footer {
+    padding: 10px;
+  }
+
+  .copyRight {
+    font-size: 12px;
+  }
+}

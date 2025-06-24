@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Kritik dan Saran</title>
+
+    <link rel="stylesheet" href="tambah.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <nav class="header">
+        <div class="logo-area">
+          <img class="logoAwal" src="../gambar/logo2.svg" alt="SoalPedia" />
+        </div>
+        <div class="menuAwal">
+            <a class="menuKumpulan" href="../soal/kumpulanSoal.html">Kumpulan Soal</a>
+        </div>
+        <div class="btnAwal">
+            <a class="btnMasuk" href="">Halo, Luthfi</a>
+        </div>
+    </nav>
+    <div class="heading">
+        <div class="back">
+            <a href="../kumpulan_soal/draft_materi.html"><img src="../icon/back.svg" alt="Icon Kembali"></a>
+            <a href="../kumpulan_soal/draft_materi.html">Back</a>
+        </div>
+    </div>
+
+    <div class="main-content-wrapper">
+        <div class="main">
+            <h2>Tambah Kritik dan Saran</h2>
+            <form action="" method="post">
+                <table>
+                    <tr>
+                        <td>Judul Soal</td>
+                        <td>:</td>
+                        <td>
+                            <label for="kritik"></label>
+                            <textarea class="kritik" name="kritik" rows="4" placeholder="ketik kritik..."></textarea>
+                        </td>
+                    </tr>
+
+                    <tr><td></td></tr>
+
+                    <tr>
+                        <td>Saran</td>
+                        <td>:</td>
+                        <td>
+                            <label for="saran"></label>
+                            <textarea class="saran" name="saran" rows="4" placeholder="ketik saran..."></textarea>
+                        </td>
+                    </tr>
+
+                    <tr><td></td></tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td class="form-buttons">
+                            <label for="cancel"></label>
+                            <input class="cancel" type="button" name="cancel" value="Cancel">
+
+                            <label for="submit"></label>
+                            <input class="submit" type="submit" name="submit" value="Submit">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p class="copyRight">&copy; 2023, SoalPedia</p>
+    </footer>
+    <script>
+        // tombol class submit ketika diklik ke halaman draft_materi.php
+        const submit = document.querySelector('.submit');
+            submit.addEventListener('click', function() {
+            window.location.href = '../kumpulan_soal/draft_materi.php';
+
+            alert('Kritik dan saran berhasil dikirim');
+        });
+
+        const cancel = document.querySelector('.cancel');
+        cancel.addEventListener('click', function() {
+            window.location.href = '../kumpulan_soal/draft_materi.php';
+        });
+    </script>
+</body>
+</html>
